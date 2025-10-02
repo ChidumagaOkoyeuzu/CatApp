@@ -8,19 +8,17 @@ class Cat (val name: String, var age: Int, var weight: Int) {
         }
         return false
     }
-    fun eat(amount: Int) {
+    fun eat(amount: Int): Boolean {
         if (amount <= 0) {
-            println("Error: There is nothing to eat.")
-            return
+            return false
         }
 
         if (weight + amount > 20) {
-            println("Error: $name cannot eat $amount as $name would be overweight.")
-            return
+            return false
         }
 
         weight += amount
-        println("$name is eating $amount unit(s) of food.")
+        return true
     }
 
     override fun toString() : String {

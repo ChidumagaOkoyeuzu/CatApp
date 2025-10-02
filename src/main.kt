@@ -13,8 +13,8 @@ fun main() {
     println(Flathead)
     println(Cupra)
 
-    Flathead.eat()
-    Flathead.eat()
+    Flathead.eat(3)
+    Flathead.eat(2)
     println(Flathead)
 
     Cupra.walk(1)
